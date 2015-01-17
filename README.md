@@ -10,4 +10,8 @@ new shit added
 
 ##Ordner erstellt und in MAMP Ordner kopiert
 
-- erst am 15.01.15
+- erstellt am 15.01.15
+
+##Umarbeiten von CSS auf SCSS
+
+-
