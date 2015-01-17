@@ -14,4 +14,7 @@ new shit added
 
 ##Umarbeiten von CSS auf SCSS
 
--
+- erstellt am 17.01.15
+- umgeschrieben in SCSS
+- Bilder kleiner gemacht
+- nach "Side loading test" Zeit um 3,5s verbessert
