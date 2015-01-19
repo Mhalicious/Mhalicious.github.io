@@ -18,3 +18,9 @@ new shit added
 - umgeschrieben in SCSS
 - Bilder kleiner gemacht
 - nach "Side loading test" Zeit um 3,5s verbessert
+
+
+
+##Email Link geändert
+
+- erstellt am 19.01.15
