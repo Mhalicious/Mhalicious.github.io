@@ -1,0 +1,23 @@
+// keyframes mixin
+=keyframes($name)
+	@-webkit-keyframes #{$name}
+		@content
+	@-moz-keyframes #{$name}
+		@content
+	@-ms-keyframes #{$name}
+		@content
+	@keyframes #{$name}
+		@content
+
+= vendor-prefix($name, $argument)
+	-webkit-#{$name}: #{$argument}
+	-ms-#{$name}: #{$argument}
+	-moz-#{$name}: #{$argument}
+	-o-#{$name}: #{$argument}
+	#{$name}: #{$argument}
+
+@function set-notification-text-color($color) 
+	@if (lightness($color) > 50)
+		@return #000000 // Lighter backgorund, return dark color
+	@else
+		@return #ffffff // Darker background, return light color

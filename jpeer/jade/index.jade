@@ -1,0 +1,166 @@
+html
+	head
+		meta(content="text/html; charset=utf-8")
+		meta(name="viewport" content="width=device-width")
+		link(rel="stylesheet" type="text/css" href="css/global.css")
+		link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css')
+		link(rel="stylesheet" href="fontawesome/font-awesome.min.css")
+	
+
+	body
+		#mainContainer
+
+			#contact 
+				a(href="")
+				#contactOuter
+					
+					#contactInner
+						h3 CONTACT ME!
+
+						form(method="POST" action="send.php")
+							.group
+								.left
+									input(type="text" value="" placeholder="NAME" name="name" tabindex="1" class="redacted")
+
+								.right
+									input(type="text" value="" placeholder="EMAIL" name="email" tabindex="3" class="redacted")
+
+
+							div
+								textarea(placeholder="MESSAGE" name="message" tabindex="5" rows="10" class="redacted")
+							
+							div
+								input(type="submit" value="Send Mail" tabindex="6" class="redacted")
+
+
+			#header
+				#headerinner
+					#img
+						a(href="#") 
+							img(src="img/logo.png")
+
+						
+					
+					#navigation
+						ul
+							li: a(href="about") about
+							li: a(href="portfolio") portfolio
+							li: a(href="#contact") contact
+
+			#sliderOuter
+
+				div.sliderInner.autoplay
+					input(name="cs_anchor1" id='cs_slide1_0' type="radio" class='cs_anchor slide'  autocomplete="off")
+					input(name="cs_anchor1" id='cs_slide1_1' type="radio" class='cs_anchor slide'  autocomplete="off")
+					input(name="cs_anchor1" id='cs_play1' type="radio" class='cs_anchor' checked autocomplete="off")
+					input(name="cs_anchor1" id='cs_pause1_0' type="radio" class='cs_anchor pause' autocomplete="off")
+					input(name="cs_anchor1" id='cs_pause1_1' type="radio" class='cs_anchor pause' autocomplete="off")
+		
+					ul
+						div(style="width: 100%; visibility: hidden; font-size: 0px; line-height: 0;")
+							img(src="img/slider/lupe.jpg" style="width: 100%;")
+
+						li.num0.img
+							img(src='img/slider/hoverfly.jpg' alt='Hoverfly_Slider' title='Hoverfly')
+
+						li.num1.img
+							img(src='img/slider/fish.jpg' alt='Fish_Slider' title='Fish')
+
+						//- li.num2.img
+						//- 	img(src='data1/images/bild.jpg' alt='bild' title='bild')
+
+					div.cs_play_pause
+						label.cs_play(for='cs_play1')
+							span
+								i
+
+						label.cs_pause.num0(for='cs_pause1_0')
+							span
+								i
+
+						label.cs_pause.num1(for='cs_pause1_1')
+							span
+								i
+
+					
+					div.cs_bullets
+						label.num0(for='cs_slide1_0')
+							span.cs_point
+							
+						label.num1(for='cs_slide1_1')
+							span.cs_point
+
+						//- label.num2(for='cs_slide1_2')
+						//- 	span.cs_point
+
+			#containerOuter
+				#container
+					.one_half.last
+
+						h1 Photographer
+
+						.four_fifth
+							p.
+								I love photography. 
+								I spend a lot of time in macro and landscape 
+								photography. For me, photography is very important
+								because I can check out the nature and see everytime 
+								some new interesting and inspiring stuff.
+
+						.one_fifth.last
+							//- for FontAwesome SVGs
+							div
+								i.fa.fa-camera-retro.fa-3x
+
+					.one_half.last 
+
+						h1 Coder 
+
+						.one_fifth 
+							//- for FontAwesome SVGs
+							div
+								i.fa.fa-code.fa-3x
+
+						.four_fifth.last
+							p.
+								I like very readable code therefore I work 
+								with Jade for HTML, SASS for CSS, 
+								and CoffeeScript for JavaScript. JQuery and CSS3 are 
+								very funny things to play around with. 
+								Currently I check out the framework CakePHP.
+								
+
+			#refContainer 
+
+				h3 SOME OF MY RECENT WORK
+
+				ul.boxes
+					li
+						a(href="http://www.digitalnativesounds.at" target="_blank")
+							img(src="img/work/digital.jpg")
+							.desc
+								.descInner
+									h5 DigitalNativeSounds 
+									p Webdesign
+
+					li
+						a(href="http://www.volxpop-music.at" target="_blank")
+							img(src="img/work/volxpop.jpg")
+							.desc
+								.descInner
+									h5 Volxpop
+									p Wordpress Theme Optimization
+
+					li
+						a(href="#3")
+							img(src="img/work/portal.jpg")
+							.desc
+								.descInner
+									h5 PortalBee
+									p Photography / Macro
+
+			#footer 
+				#footerInner copyright Jan Peer
+					#footIMG
+						a(href="#") 
+							img(src="img/logo.png")

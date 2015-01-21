@@ -1,0 +1,256 @@
+$color1: #dedbd6
+$color2: rgb(192,192,192)
+$color3: rgb(140,140,140)
+$color4: rgb(43,43,43)
+$color5: rgb(224,221,216)
+$maincolor: $color4
+$background: #ecf0f1
+$footcolor: lighten(#7f8c8d, 10%)
+$hoverLightenPercent: 10%
+
+.clearfix:after 
+	content: "."
+	display: block
+	clear: both
+	visibility: hidden
+	line-height: 0
+	height: 0
+
+ 
+.clearfix 
+	display: inline-block
+
+ 
+html[xmlns] .clearfix 
+	display: block
+ 
+* html .clearfix 
+	height: 1%
+
+*, *:before, *:after
+	+vendor-prefix(box-sizing, border-box)
+
+*
+	font-family: 'Open Sans', sans-serif
+
+body
+	background: $background url(../img/noise-grey.jpg)
+
+#mainContainer, body, html
+	min-width: 350px
+	width: 100%
+	height: 100%
+	margin: 0
+	padding: 0
+
+#header
+	width: 100%
+	height: 40px
+
+#header
+	background: $maincolor
+	width: 100%
+	margin: 0
+
+#headerinner
+	max-width: 960px
+	height: inherit
+	margin: 0 auto
+	position: relative
+
+
+
+#img
+	margin: 0 auto
+	width: 40px
+	height: inherit
+	padding: 0
+
+#img, #footIMG
+	img 
+		width: 100%
+		z-index: 1
+
+	a 
+		display: block 
+		height: 100%
+		transition: background 0.5s
+		z-index: 2
+
+#footIMG 
+	a
+		padding: 5px
+
+#footIMG
+	a:hover 
+		background: lighten($footcolor, 10%)
+
+#navigation
+	width: auto
+	height: inherit
+	position: absolute
+	right: 20px
+	top: 0
+	display: table
+
+	ul 
+		margin: 0
+		display: table-cell
+		vertical-align: middle
+		padding: 0
+
+	ul li 
+		display: inline-block
+		margin-right: 10px
+		padding-right: 10px
+		border-right: 1px solid set-notification-text-color($maincolor)
+
+	ul li:nth-child(3)
+		border-right: 0
+
+	a 
+		color: set-notification-text-color($maincolor)
+		text-decoration: none
+		transition: color 0.3s
+
+
+	a:hover 
+		color: darken($background, 30%)
+		transition: color 0.3s
+
+#containerOuter, .sectionOuter
+	width: 100%
+
+.sectionOuter
+	position: relative
+
+.fixpic
+	position: absolute
+	left: 0
+	height: 100%
+	background: #000
+
+.black
+	background: $color4
+	color: white
+
+section, #container
+	max-width: 960px
+	height: auto 
+	min-height: 100px
+	margin: 0 auto 20px
+
+	img 
+		width: 100%
+
+	h1 
+		text-align: center
+
+	> .one_half 
+		text-align: justify
+		
+		> .one_fifth div
+			margin: 0 auto
+			width: 48px
+			color: $footcolor
+			+vendor-prefix(transition, color 0.7s)
+
+	> .one_half:hover .one_fifth div 
+		color: black
+		+vendor-prefix(transition, color 0.7s)
+
+#container
+	padding: 1em
+
+	.one_half:nth-child(1)
+		margin-left: 1.3%
+		border-right: 1px solid $footcolor
+
+section
+	padding: 0
+
+	span
+		font-size: 1.2em
+		color: darken(#fff, 10%)
+
+	h1
+		text-align: left
+		font-size: 3em
+
+	.last 
+		margin-bottom: 0
+
+#container:after, section:after
+	content: ""
+	display: block
+	clear: both
+
+
+/* --------------------------
+ * ----- Reference.html -----
+ * --------------------------
+ */
+
+
+#refContainer
+	width: 960px
+	padding: 1em
+	height: auto 
+	margin: 1em auto 0
+
+	h3
+		border-bottom: 1px solid $footcolor
+		margin-bottom: 0
+		margin-top: 0
+		padding-left: 1em
+		font-size: 1.2em
+		height: 1.1em
+		color: $footcolor
+		+vendor-prefix(transition, color .7s)
+
+
+#refContainer:hover 
+	h3
+		color: darken($footcolor, 30%) 
+		+vendor-prefix(transition, color .7s)
+	
+
+#sortOuter 
+	width: 200px
+	height: auto
+
+#sortInner
+	width: inherit
+	height: 300px
+	padding: 5px
+	background: black
+
+	section 
+		background: white 
+		padding: 5px
+
+
+#footer 
+	width: 99%
+	height: 40px
+	margin: 0 auto
+	padding: 0 10px
+	border-top: 1px solid $footcolor
+	color: $footcolor
+	font-size: 0.5em
+
+	#footerInner
+		position: relative
+		width: 100%
+		height: inherit
+
+#footIMG
+	position: absolute
+	right: 0 
+	top: 0
+	height: inherit 
+	width: 30px
+
+
+
+

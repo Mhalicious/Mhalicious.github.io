@@ -1,0 +1,528 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin,cyrillic-ext,latin-ext,cyrillic,greek-ext,greek,vietnamese);
+@font-face {
+	font-family: "basiccontrols";
+	src: url("../ebasiccontrols.eot");
+	src: url("basiccontrols.eot#iefix") format("embedded-opentype"),
+			url("basiccontrols.woff") format("woff"),
+			url("basiccontrols.ttf") format("truetype"),
+			url("basiccontrols.svg#basic") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+.csslider1 {
+	display: inline-block;
+	position: relative;
+	height: inherit;
+	width: 100%;
+}
+.csslider1 > .cs_anchor {
+	display: none;
+}
+.csslider1 > ul {
+	position: relative;
+	z-index: 1;
+	font-size: 0;
+	line-height: 0;
+	margin: 0 auto;
+	padding: 4%;
+	height: inherit;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.csslider1 > ul > li.img img {
+	width: 100%;
+}
+.csslider1 > ul > li.img {
+	font-size: 0pt;
+}
+.csslider1 > ul > li {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	font-size: 15px;
+	font-size: initial;
+	line-height: normal;
+	white-space: normal;
+	vertical-align: top;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	-o-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+.csslider1 .cs_lnk{
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+	font-size: 0pt;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+.csslider1 > ul > li.img,
+.csslider1 > .cs_arrowprev,
+.csslider1 > .cs_arrownext,
+.csslider1 > .cs_bullets,
+.csslider1 > .cs_play_pause {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}.csslider1 > .cs_arrowprev,
+.csslider1 > .cs_arrownext {
+	position: absolute;
+	top: 10%;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	z-index: 5;
+}
+.csslider1 > .cs_arrowprev > label,
+.csslider1 > .cs_arrownext > label {
+	position: absolute;
+
+	text-decoration: none;
+	cursor: pointer;
+	opacity: 0;
+	z-index: -1;
+}
+.csslider1 > .cs_arrowprev {
+	left: 0;
+}
+.csslider1 > .cs_arrownext {
+	right: 0;
+}
+
+.csslider1 > .slide:checked ~ .cs_arrowprev > label,
+.csslider1 > .slide:checked ~ .cs_arrownext > label {
+	opacity: 0;
+	z-index: -1;
+}
+
+
+
+.csslider1 > #cs_slide1_0:checked ~ .cs_arrowprev > label.num1,
+.csslider1 > #cs_pause1_0:checked ~ .cs_arrowprev > label.num1,
+.csslider1 > #cs_slide1_0:checked ~ .cs_arrownext > label.num1,
+.csslider1 > #cs_pause1_0:checked ~ .cs_arrownext > label.num1, 
+.csslider1 > #cs_slide1_1:checked ~ .cs_arrowprev > label.num0,
+.csslider1 > #cs_pause1_1:checked ~ .cs_arrowprev > label.num0,
+.csslider1 > #cs_slide1_1:checked ~ .cs_arrownext > label.num0,
+.csslider1 > #cs_pause1_1:checked ~ .cs_arrownext > label.num0 {
+	opacity: 1;
+	z-index: 5;
+}
+
+/* calculate autoplay */
+@-webkit-keyframes arrow {
+	0%, 49.99% { opacity: 1; z-index: 5; }
+	50%, 100%	{ opacity: 0; z-index: -1; }
+}
+@-moz-keyframes arrow {
+	0%, 49.99% { opacity: 1; z-index: 5; }
+	50%, 100%	{ opacity: 0; z-index: -1; }
+}
+@-ms-keyframes arrow {
+	0%, 49.99% { opacity: 1; z-index: 5; }
+	50%, 100%	{ opacity: 0; z-index: -1; }
+}
+@-o-keyframes arrow {
+	0%, 49.99% { opacity: 1; z-index: 5; }
+	50%, 100%	{ opacity: 0; z-index: -1; }
+}
+@keyframes arrow {
+	0%, 49.99% { opacity: 1; z-index: 5; }
+	50%, 100%	{ opacity: 0; z-index: -1; }
+}
+
+
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num1,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num1 {
+	-webkit-animation: arrow 16000ms infinite -2000ms;
+	-moz-animation: arrow 16000ms infinite -2000ms;
+	-ms-animation: arrow 16000ms infinite -2000ms;
+	-o-animation: arrow 16000ms infinite -2000ms;
+	animation: arrow 16000ms infinite -2000ms;
+	
+}
+.csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num0,
+.csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num0 {
+	-webkit-animation: arrow 16000ms infinite 6000ms;
+	-moz-animation: arrow 16000ms infinite 6000ms;
+	-ms-animation: arrow 16000ms infinite 6000ms;
+	-o-animation: arrow 16000ms infinite 6000ms;
+	animation: arrow 16000ms infinite 6000ms;
+	
+}
+
+
+/* stop */
+.csslider1 > .slide:checked ~ .cs_arrowprev > label,
+.csslider1 > .slide:checked ~ .cs_arrownext > label,
+.csslider1 > .pause:checked ~ .cs_arrowprev > label,
+.csslider1 > .pause:checked ~ .cs_arrownext > label {
+	-webkit-animation: none;
+	-moz-animation: none;
+	-ms-animation: none;
+	-o-animation: none;
+	animation: none;
+}
+
+
+/* /calculate autoplay */
+.csslider1 > .cs_bullets {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	z-index: 6;
+	font-size: 0;
+	line-height: 8pt;
+	text-align: center;
+}
+.csslider1 > .cs_bullets > div {
+	margin-left: -50%;
+	width: 100%;
+}
+.csslider1 > .cs_bullets > label {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+}
+.csslider1 > .cs_bullets > label > .cs_thumb {
+	visibility: hidden;
+	position: absolute;
+	opacity: 0;
+	z-index: 1;
+	line-height: 0;
+	left: -32px;
+	top: -48px;
+}
+.csslider1 > .cs_bullets > label > .cs_thumb > img {
+	max-width: none;
+}
+
+.csslider1 > .cs_play_pause {
+	position: absolute;
+	bottom: 7%;
+	left: 5%;
+	z-index: 5;
+}
+.csslider1 > .cs_play_pause > label {
+	position: absolute;
+	cursor: pointer;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause,
+.csslider1 > .slide:checked ~ .cs_play_pause > .cs_play,
+.csslider1 > .pause:checked ~ .cs_play_pause > .cs_play {
+	display: block;
+	z-index: 5;
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_play,
+.csslider1 > .slide:checked ~ .cs_play_pause > .cs_pause,
+.csslider1 > .pause:checked ~ .cs_play_pause > .cs_pause {
+	display: none;
+	z-index: -1;
+}
+
+
+/* calculate autoplay */
+@-webkit-keyframes pauseChange {
+	0%, 49.99% { opacity: 1; z-index: 5; }
+	50%, 100%	{ opacity: 0; z-index: -1; }
+}
+@-moz-keyframes pauseChange {
+	0%, 49.99% { opacity: 1; z-index: 5; }
+	50%, 100%	{ opacity: 0; z-index: -1; }
+}
+@-ms-keyframes pauseChange {
+	0%, 49.99% { opacity: 1; z-index: 5; }
+	50%, 100%	{ opacity: 0; z-index: -1; }
+}
+@-o-keyframes pauseChange {
+	0%, 49.99% { opacity: 1; z-index: 5; }
+	50%, 100%	{ opacity: 0; z-index: -1; }
+}
+@keyframes pauseChange {
+	0%, 49.99% { opacity: 1; z-index: 5; }
+	50%, 100%	{ opacity: 0; z-index: -1; }
+}
+
+
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num0 {
+	opacity: 0;
+	z-index: -1;
+	-webkit-animation: pauseChange 16000ms infinite -2000ms;
+	-moz-animation: pauseChange 16000ms infinite -2000ms;
+	-ms-animation: pauseChange 16000ms infinite -2000ms;
+	-o-animation: pauseChange 16000ms infinite -2000ms;
+	animation: pauseChange 16000ms infinite -2000ms;
+	
+}
+.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num1 {
+	opacity: 0;
+	z-index: -1;
+	-webkit-animation: pauseChange 16000ms infinite 6000ms;
+	-moz-animation: pauseChange 16000ms infinite 6000ms;
+	-ms-animation: pauseChange 16000ms infinite 6000ms;
+	-o-animation: pauseChange 16000ms infinite 6000ms;
+	animation: pauseChange 16000ms infinite 6000ms;
+	
+}
+
+
+/* stop */
+.csslider1 > .slide:checked ~ .cs_play_pause > .cs_pause,
+.csslider1 > .pause:checked ~ .cs_play_pause > .cs_pause {
+	-webkit-animation: none;
+	-moz-animation: none;
+	-ms-animation: none;
+	-o-animation: none;
+	animation: none;
+}
+
+
+/* /calculate autoplay */
+
+.csslider1 > #cs_slide1_0:checked ~ ul > li.num0,
+.csslider1 > #cs_pause1_0:checked ~ ul > li.num0,
+.csslider1 > #cs_slide1_1:checked ~ ul > li.num1,
+.csslider1 > #cs_pause1_1:checked ~ ul > li.num1 {
+	opacity: 1;
+	z-index: 2;
+}
+
+.csslider1 > ul > li {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	z-index: 1;
+  
+  	-webkit-transition: opacity 2000ms ease;
+  	-moz-transition: opacity 2000ms ease;
+  	-ms-transition: opacity 2000ms ease;
+  	-o-transition: opacity 2000ms ease;
+  	transition: opacity 2000ms ease;
+  	
+
+	
+  	-webkit-transform: rotate(0deg);
+  	-moz-transform: rotate(0deg);
+  	-ms-transform: rotate(0deg);
+  	-o-transform: rotate(0deg);
+  	transform: rotate(0deg);
+  	
+}
+
+/* calculate autoplay */
+@-webkit-keyframes fade {
+	0%, 62.5%, 100%	{ opacity: 0; z-index: 2; }
+	12.5%, 50%	{ opacity: 1; z-index: 2; }
+}
+@-moz-keyframes fade {
+	0%, 62.5%, 100%	{ opacity: 0; z-index: 2; }
+	12.5%, 50%	{ opacity: 1; z-index: 2; }
+}
+@-ms-keyframes fade {
+	0%, 62.5%, 100%	{ opacity: 0; z-index: 2; }
+	12.5%, 50%	{ opacity: 1; z-index: 2; }
+}
+@-o-keyframes fade {
+	0%, 62.5%, 100%	{ opacity: 0; z-index: 2; }
+	12.5%, 50%	{ opacity: 1; z-index: 2; }
+}
+@keyframes fade {
+	0%, 62.5%, 100%	{ opacity: 0; z-index: 2; }
+	12.5%, 50%	{ opacity: 1; z-index: 2; }
+}
+
+
+.csslider1 > #cs_play1:checked ~ ul > li.num0 {
+	-webkit-animation: fade 16000ms infinite -2000ms;
+	-moz-animation: fade 16000ms infinite -2000ms;
+	-ms-animation: fade 16000ms infinite -2000ms;
+	-o-animation: fade 16000ms infinite -2000ms;
+	animation: fade 16000ms infinite -2000ms;
+	
+}
+.csslider1 > #cs_play1:checked ~ ul > li.num1 {
+	-webkit-animation: fade 16000ms infinite 6000ms;
+	-moz-animation: fade 16000ms infinite 6000ms;
+	-ms-animation: fade 16000ms infinite 6000ms;
+	-o-animation: fade 16000ms infinite 6000ms;
+	animation: fade 16000ms infinite 6000ms;
+	
+}
+
+
+
+.csslider1 > #cs_play1:checked ~ ul > li,
+.csslider1 > .pause:checked ~ ul > li {
+	-webkit-transition: none;
+	-moz-transition: none;
+	-ms-transition: none;
+	-o-transition: none;
+	transition: none;
+	
+}
+
+
+.csslider1 > .cs_play_pause > label{
+	text-decoration: none;
+	padding: 15px;
+	height: auto;
+	width: auto;
+
+	margin-top: -28px;
+	margin-left: -28px;
+
+	background-color: #34495e;
+
+	-webkit-border-radius: 10%;
+	-moz-border-radius: 10%;
+	border-radius: 10%;
+}
+.csslider1 > .cs_play_pause > label,
+.csslider1 > .cs_play_pause > label:after {
+    -webkit-transition: background-color 0.4s ease, color 0.4s ease;
+    -moz-transition: background-color 0.4s ease, color 0.4s ease;
+    -o-transition: background-color 0.4s ease, color 0.4s ease;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+.csslider1 > .cs_play_pause > label:after{
+	display: block;
+	font: 15px "basiccontrols";
+	color: #e9e9e9;
+	margin: 0 auto;
+	line-height: 5px;
+	text-align: center;
+}
+/* IE10+ hack */
+_:-ms-input-placeholder, :root .csslider1 > .cs_play_pause > label:after {
+	line-height: 18px;
+}
+.csslider1 > .cs_play_pause > .cs_play:after {
+	content: '\e802';
+}
+.csslider1 > .cs_play_pause > .cs_pause:after {
+	content: '\e803';
+}
+
+.csslider1 > .cs_play_pause:hover > label {
+	background-color: #46627f;
+}
+
+
+.csslider1 > .cs_bullets {
+	bottom: 5px;
+	margin-bottom: 5px;
+}
+.csslider1 > .cs_bullets > label {
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	margin: 0 5px;
+	padding: 9px;
+	background: #34495e;
+}
+
+
+
+
+.csslider1 > .cs_bullets > label > .cs_point {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -2px;
+	margin-top: -2px;
+	background: transparent;
+	border-radius: 50%;
+	padding: 2px;
+}
+
+.csslider1 > .cs_bullets > label:hover > .cs_point,
+
+.csslider1 > #cs_slide1_0:checked ~ .cs_bullets > label.num0 > .cs_point,
+.csslider1 > #cs_pause1_0:checked ~ .cs_bullets > label.num0 > .cs_point,
+.csslider1 > #cs_slide1_1:checked ~ .cs_bullets > label.num1 > .cs_point,
+.csslider1 > #cs_pause1_1:checked ~ .cs_bullets > label.num1 > .cs_point {
+	background: #e9e9e9;
+}
+
+/* calculate autoplay */
+@-webkit-keyframes bullet {
+	0%, 49.99%	{ background: #e9e9e9; }
+	50%, 100% { background: transparent; }
+}
+@-moz-keyframes bullet {
+	0%, 49.99%	{ background: #e9e9e9; }
+	50%, 100% { background: transparent; }
+}
+@-ms-keyframes bullet {
+	0%, 49.99%	{ background: #e9e9e9; }
+	50%, 100% { background: transparent; }
+}
+@-o-keyframes bullet {
+	0%, 49.99%	{ background: #e9e9e9; }
+	50%, 100% { background: transparent; }
+}
+@keyframes bullet {
+	0%, 49.99%	{ background: #e9e9e9; }
+	50%, 100% { background: transparent; }
+}
+
+
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num0 > .cs_point,
+.csslider1 > #cs_pause1:checked ~ .cs_bullets > label.num0 > .cs_point {
+	-webkit-animation: bullet 16000ms infinite -2000ms;
+	-moz-animation: bullet 16000ms infinite -2000ms;
+	-ms-animation: bullet 16000ms infinite -2000ms;
+	-o-animation: bullet 16000ms infinite -2000ms;
+	animation: bullet 16000ms infinite -2000ms;
+	
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num1 > .cs_point,
+.csslider1 > #cs_pause1:checked ~ .cs_bullets > label.num1 > .cs_point {
+	-webkit-animation: bullet 16000ms infinite 6000ms;
+	-moz-animation: bullet 16000ms infinite 6000ms;
+	-ms-animation: bullet 16000ms infinite 6000ms;
+	-o-animation: bullet 16000ms infinite 6000ms;
+	animation: bullet 16000ms infinite 6000ms;
+	
+}
+
+
+
+
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label > .cs_point,
+.csslider1 > .pause:checked ~ .cs_bullets > label > .cs_point {
+  	-webkit-transition: none;
+  	-moz-transition: none;
+  	-ms-transition: none;
+  	-o-transition: none;
+  	transition: none;
+  	
+}
+
+
+/* stop */
+
+.csslider1 > .slide:checked ~ .cs_bullets > label > .cs_point,
+.csslider1 > .pause:checked ~ .cs_bullets > label > .cs_point {
+	-webkit-animation: none;
+	-moz-animation: none;
+	-ms-animation: none;
+	-o-animation: none;
+	animation: none;
+}
